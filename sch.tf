@@ -36,6 +36,9 @@ resource "yandex_compute_instance" "vm-1" {
   metadata = {
     user-data = "${file("./user.yml")}"
   }
+  scheduling_policy {
+    preemptible = true 
+  }
 
 }
 
