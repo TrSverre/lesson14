@@ -36,7 +36,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    user-data = "${file("/home/user/lesson14/user")}"
+    user-data = "${file("./user.yml")}"
   }
 }
 
