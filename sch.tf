@@ -11,7 +11,6 @@ provider "yandex" {
   cloud_id  = "b1g6o30rad2hkh87j34f"
   folder_id = "b1gum68ifoa9fbhijk7v"
   zone = "ru-central1-a"
-  allow_stopping_for_update = true
 }
   
 data "yandex_compute_image" "ubuntu_image" {
@@ -19,7 +18,7 @@ data "yandex_compute_image" "ubuntu_image" {
 }
 resource "yandex_compute_instance" "vm-1" {
   name = "terraform1"
-
+  allow_stopping_for_update = true
   resources {
     cores  = 2
     memory = 2
