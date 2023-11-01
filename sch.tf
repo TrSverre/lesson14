@@ -31,7 +31,7 @@ variable "paramsvm" {
 }
 resource "yandex_compute_instance" "vm-1" {
   name = var.paramsvm.namevm1
-  id = var.paramsvm.namevm1
+ # id = var.paramsvm.namevm1
   allow_stopping_for_update = true
   resources {
     cores  = var.paramsvm.cor1
@@ -65,7 +65,7 @@ resource "yandex_compute_disk" "hddvm1" {
 
 resource "yandex_compute_instance" "vm-2" {
   name = var.paramsvm.namevm2
-  id = var.paramsvm.namevm2
+ # id = var.paramsvm.namevm2
   allow_stopping_for_update = true
   resources {
     cores  = var.paramsvm.cor2
